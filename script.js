@@ -44,7 +44,6 @@ searchButton.addEventListener("click", () => getSearchValue());
 search.addEventListener("keydown", (e) => getSearchValue(e));
 
 
-console.log(localStorage.getItem ("searchValue"))
 
 const searchValue = !localStorage.getItem("searchValue") ?
     [] :
