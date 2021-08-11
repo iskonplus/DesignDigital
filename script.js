@@ -21,6 +21,8 @@ function openClousWindowElectricity() {
 }
 
 wrapperButtonNav.addEventListener("click", () => openClousMenu());
+containerNav.addEventListener("click", () => openClousMenu());
+
 
 function openClousMenu() {
     buttonNav.classList.toggle("active");
@@ -29,6 +31,9 @@ function openClousMenu() {
     ulNav.classList.toggle("active");
     
 }
+
+
+// 
 
 // console.log(like)
 
