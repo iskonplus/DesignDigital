@@ -19,7 +19,7 @@
 
         <!-- -------------------header--------------------- -->
 
-        <header class="container header">
+        <header class="container header" id="home">
             <h1>Lucrumplus</h1>
             <form>
                 <input type="search" class="search" name="search" placeholder="Search...">
@@ -29,17 +29,22 @@
         </header>
 
         <!-- -------------------nav--------------------- -->
-
+        
+        
+        <div class="wrapper_button_nav">
+            <div class="button_nav"></div>
+        </div>  
         <nav class="container nav">
 
 
-            <Ul class="nav">
-                <li><a class="a_nav active" href="#id_header">New products</a></li>
-                <li><a class="a_nav" href="#id_services">Bestseller products</a></li>
-                <li><a class="a_nav" href="#id_advantages">Sale products</a></li>
-                <li><a class="a_nav" href="#id_feedback">What is lucrumplus?</a></li>
-                <li><a class="a_nav" href="#id_information">Subscribe</a></li>
-                <li><a class="a_nav" href="#id_callback">Обратная связь</a></li>
+            <Ul class="nav ul">
+                <li><a class="a_nav active" href="#home">Home</a></li>
+                <li><a class="a_nav active" href="#new_products">New products</a></li>
+                <li><a class="a_nav" href="#bestseller_products">Bestseller products</a></li>
+                <li><a class="a_nav" href="#sale_products">Sale products</a></li>
+                <li><a class="a_nav" href="#what_is_lucrumplus">What is lucrumplus?</a></li>
+                <li><a class="a_nav" href="#subscribe">Subscribe</a></li>
+                <li><a class="a_nav" href="#download_App">Download App</a></li>
             </Ul>
 
 
@@ -54,7 +59,7 @@
 
         <main>
             <div class="wrapper_article">
-                <article class="container article new_products">
+                <article class="container article new_products" id="new_products">
                     <h2>New products</h2>
                     <div class="wrapper products new">
 
@@ -82,7 +87,7 @@
 
             </div>
 
-            <article class="container article bestseller products">
+            <article class="container article bestseller products" id="bestseller_products">
                 <h2>Bestseller products</h2>
                 <div class="wrapper products bestseller">
 
@@ -145,7 +150,7 @@
 
             <!-- /* -------------------sale---------------------  */ -->
 
-            <article class="container article sale products">
+            <article class="container article sale products" id="sale_products">
                 <h2>Sale products</h2>
                 <div class="wrapper products sale">
 
@@ -285,7 +290,7 @@
 
             <!-- /* -------------------what is lucrumplus---------------------  */ -->
 
-            <div class="wrapper article_what_is_lucrumplus ">
+            <div class="wrapper article_what_is_lucrumplus " id="what_is_lucrumplus">
 
                 <article class="container what_is_lucrumplus">
                     <h2>What is lucrumplus?</h2>
@@ -331,7 +336,7 @@
             <div class="wrapper subscribe">
 
 
-                <article class="container subscribe ">
+                <article class="container subscribe " id="subscribe">
                     <h4>Yes! Send me exclusive offers, unique gift ideas, and personalised tips for shopping and selling
                         on
                         Lucrumplus.</h4>
@@ -403,8 +408,8 @@
                             <li><a href="#">Privacy settings</a></li>
                         </ul>
 
-                        <div class="block_footer_social">
-                            <input type="button" value="Download App" class="big_button">
+                        <div class="block_footer_social" id="download_App">
+                            <input type="button" value="Download App" class="big_button soc">
                             <div class="block_social">
                                 <div class="wrapper_icon_social">
                                     <div class="icon_social a"></div>
@@ -433,13 +438,13 @@
         </div>
 
         <div class="wrapper_block_footer_copyright">
-            <footer class="container footer ">
+            <footer class="container footer cop">
                 <div class="copyright lang">
 
-                    <input type="button" value="Rusland  |  English (UK)  |  $(USD)" class="big_button">
+                    <input type="button" value="Rusland  |  English (UK)  |  $(USD)" class="big_button lang" >
 
                 </div>
-                <div class="copyright">
+                <div class="copyright cop">
                     <ul>
                         <li><p>© 2021 Etsy, Inc.</p></li>
                         <li><a href="#">Terms of Use</a></li>
