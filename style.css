@@ -33,6 +33,11 @@ form {
   margin: 0px 20px;
   position: relative;
 }
+.formSearch {
+  width: 100%;
+  margin: 0px 20px;
+  position: relative;
+}
 
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
@@ -62,7 +67,10 @@ input::-webkit-search-results-decoration {
   top: 50%;
   right: 0%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
+
 }
+
 
 .search:focus {
   background: #ffffff;
@@ -792,9 +800,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* .copyright {
-  width: 40%;
-} */
+
 
 .copyright.lang > .big_button {
   background: #232347;
@@ -840,7 +846,8 @@ h2 {
     margin-bottom: 20px;
   }
 
-  .container.header > form {
+  .formSearch {
+    
     margin: 0px 0px 20px 0px;
     padding-left: 5px;
     padding-right: 5px;
