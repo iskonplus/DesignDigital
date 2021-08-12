@@ -56,29 +56,42 @@ function setInLocalStorage() {
   searchValue.push(search.value);
   localStorage.setItem("searchValue", JSON.stringify(searchValue));
   search.value = "";
-  // localStorage.clear()
 }
 
 // -------------formSubscribe----------------
-
-// formSubscribe.addEventListener()
-console.log(formSubscribe.elements.submit);
 
 const isValueSubscribe = !localStorage.getItem("Email")
   ? []
   : JSON.parse(localStorage.getItem("Email"));
 
-formSubscribe.elements.submit.addEventListener("click", (event) =>
-  getValueSubscribe(event)
-);
+let chechEmail;
+const inputEmail = formSubscribe.elements.email;
+
+formSubscribe.elements.submit.addEventListener("click", (event) => getValueSubscribe(event));
 
 function getValueSubscribe(event) {
   event.preventDefault();
-
-  isValueSubscribe.push(formSubscribe.elements.email.value);
-  localStorage.setItem("Email", JSON.stringify(isValueSubscribe));
-  formSubscribe.elements.email.value = "";
-
-
-  // localStorage.clear()
+  if (chechEmail) {
+    isValueSubscribe.push(formSubscribe.elements.email.value);
+    localStorage.setItem("Email", JSON.stringify(isValueSubscribe));
+    inputEmail.value = "";
+    inputEmail.style.border = "none";
+  }
 }
+
+inputEmail.addEventListener("input", () => validationEmail());
+
+function validationEmail () {
+  const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  const address = inputEmail.value;
+
+  if (!reg.test(address)) {
+    chechEmail = false;
+    inputEmail.style.border = "1px solid red";
+    return false;
+  } else {
+    chechEmail = true;
+    inputEmail.style.border = "1px solid green";
+  }
+}
+// localStorage.clear();
