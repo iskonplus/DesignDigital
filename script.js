@@ -7,6 +7,7 @@ const containerNav = document.querySelector(".container.nav");
 const ulNav = document.querySelector(".nav.ul");
 const search = document.querySelector(".search");
 const searchButton = document.querySelector(".icon_search");
+const formSubscribe = document.querySelector(".form_subscribe");
 
 // console.log(blockHelp);
 like.forEach((el) => {
@@ -43,21 +44,41 @@ function openClousMenu() {
 searchButton.addEventListener("click", () => getSearchValue());
 search.addEventListener("keydown", (e) => getSearchValue(e));
 
-
-
-const searchValue = !localStorage.getItem("searchValue") ?
-    [] :
-    JSON.parse(localStorage.getItem("searchValue"));
+const searchValue = !localStorage.getItem("searchValue")
+  ? []
+  : JSON.parse(localStorage.getItem("searchValue"));
 
 function getSearchValue(e) {
-  !!e ?
-      e.key === "Enter" &&  setInLocalStorage():
-      setInLocalStorage();
+  !!e ? e.key === "Enter" && setInLocalStorage() : setInLocalStorage();
 }
 
 function setInLocalStorage() {
   searchValue.push(search.value);
   localStorage.setItem("searchValue", JSON.stringify(searchValue));
-    search.value = "";
-    // localStorage.clear()
+  search.value = "";
+  // localStorage.clear()
+}
+
+// -------------formSubscribe----------------
+
+// formSubscribe.addEventListener()
+console.log(formSubscribe.elements.submit);
+
+const isValueSubscribe = !localStorage.getItem("Email")
+  ? []
+  : JSON.parse(localStorage.getItem("Email"));
+
+formSubscribe.elements.submit.addEventListener("click", (event) =>
+  getValueSubscribe(event)
+);
+
+function getValueSubscribe(event) {
+  event.preventDefault();
+
+  isValueSubscribe.push(formSubscribe.elements.email.value);
+  localStorage.setItem("Email", JSON.stringify(isValueSubscribe));
+  formSubscribe.elements.email.value = "";
+
+
+  // localStorage.clear()
 }
