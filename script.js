@@ -66,6 +66,7 @@ const isValueSubscribe = !localStorage.getItem("Email")
 
 let chechEmail;
 const inputEmail = formSubscribe.elements.email;
+const inputSubmit = formSubscribe.elements.submit;
 
 formSubscribe.elements.submit.addEventListener("click", (event) => getValueSubscribe(event));
 
@@ -75,7 +76,9 @@ function getValueSubscribe(event) {
     isValueSubscribe.push(formSubscribe.elements.email.value);
     localStorage.setItem("Email", JSON.stringify(isValueSubscribe));
     inputEmail.value = "";
-    inputEmail.style.border = "none";
+    inputEmail.style.border = "1px solid #d6e6f5";
+    inputSubmit.style.border = "1px solid #d6e6f5";
+
   }
 }
 
@@ -88,10 +91,17 @@ function validationEmail () {
   if (!reg.test(address)) {
     chechEmail = false;
     inputEmail.style.border = "1px solid red";
+    inputEmail.style.borderRight = "none";
+    inputSubmit.style.border = "1px solid red";
+    inputSubmit.style.borderLeft = "none";
     return false;
   } else {
     chechEmail = true;
     inputEmail.style.border = "1px solid green";
+    inputEmail.style.borderRight = "none";
+    inputSubmit.style.border = "1px solid green";
+    inputSubmit.style.borderLeft = "none";
+
   }
 }
 // localStorage.clear();
