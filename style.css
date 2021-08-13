@@ -1065,6 +1065,7 @@ h2 {
     transform: rotate(45deg);
     height: 2px;
     top:19px;
+    background: #ffffff;
   }
 
   .button_nav.active::before{
